@@ -16,6 +16,7 @@ class Admin::DashboardController < ApplicationController
   # GET /admin/dashboards/new
   def new
     @admin_dashboard = Admin::Dashboard.new
+    @all_users = Admin.all.map{ |f| "#{f.first_name} #{f.last_name}" }
   end
 
   # GET /admin/dashboards/1/edit
@@ -30,7 +31,7 @@ class Admin::DashboardController < ApplicationController
     respond_to do |format|
       if @admin_dashboard.save
         format.html { redirect_to @admin_dashboard, notice: 'Dashboard was successfully created.' }
-        format.json { render :show, status: :created, location: @admin_dashboard }
+        format.json { render :index, status: :created, location: @admin_dashboard }
       else
         format.html { render :new }
         format.json { render json: @admin_dashboard.errors, status: :unprocessable_entity }

@@ -17,6 +17,11 @@
 	width: 50%;
 }
 
+.form {
+	margin: 15% 25% 25% 25%;
+	width:50%;
+}
+
 @media (max-width: 450px){
 	#brand { 
 		max-width: 55%;

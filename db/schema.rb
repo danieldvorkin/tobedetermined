@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160310014159) do
+ActiveRecord::Schema.define(version: 20160310051609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 20160310014159) do
   create_table "admin_dashboards", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "creator"
+    t.text     "details"
   end
 
   create_table "admins", force: :cascade do |t|
@@ -34,6 +37,8 @@ ActiveRecord::Schema.define(version: 20160310014159) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree

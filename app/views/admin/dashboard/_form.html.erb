@@ -1,4 +1,4 @@
-<%= simple_form_for :dashboard do |f| %>
+<%= simple_form_for(:dashboard, url: admin_dashboard_index_path) do |f| %>
   <% if @admin_dashboard.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_dashboard.errors.count, "error") %> prohibited this admin_dashboard from being saved:</h2>
@@ -10,8 +10,15 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
+  
+  <div class="form">
+    <h1>New Admin Dashboard</h1>
+    <%= f.input :name %>
+    <%= f.input :details %>
+    <%= f.input :creator, collection: @all_users, include_blank: false, prompt: ":: Choose an Admin ::" %>
+  
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
