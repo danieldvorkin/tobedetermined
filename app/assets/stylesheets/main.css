@@ -15,11 +15,22 @@
 	top:0px;
 }
 
+#login {
+	margin: 15% 25% 25% 25%;
+	text-align: center;
+	width: 50%;
+}
+
 @media (max-width: 450px){
 	#brand { 
 		max-width: 55%;
 		top:-50px;
 		left:90px;
+	}
+	#login {
+		margin: 30% 25% 25% 25%;
+		text-align: center;
+		width: 50%;
 	}
 }
 
