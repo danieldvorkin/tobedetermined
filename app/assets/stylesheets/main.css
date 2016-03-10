@@ -4,10 +4,28 @@
   top: -30px;
 }
 
+.navbar-brand:hover {
+	background:transparent;
+}
+#dashboard {
+	margin: 150px 150px 125px 150px;
+}
+
+#admin-navbar {
+	top:0px;
+}
+
 @media (max-width: 450px){
 	#brand { 
 		max-width: 55%;
 		top:-50px;
 		left:90px;
+	}
+}
+
+@media (min-width:960px) {
+	#navbar {
+		position:relative;
+		top:-25px;
 	}
 }
