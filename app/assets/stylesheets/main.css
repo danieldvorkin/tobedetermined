@@ -1,43 +1,50 @@
 #brand {
-	max-width: 45%;
+  max-width: 45%;
   position: relative;
   top: -30px;
 }
 
 .navbar-brand:hover {
-	background:transparent;
+  background: transparent;
 }
+
 #dashboard {
-	margin: 150px 150px 125px 150px;
+  margin: 150px 150px 125px 150px;
 }
 
 #login {
-	margin: 15% 25% 25% 25%;
-	text-align: center;
-	width: 50%;
+  margin: 15% 25% 25% 25%;
+  text-align: center;
+  width: 50%;
 }
 
 .form {
-	margin: 15% 25% 25% 25%;
-	width:50%;
+  margin: 15% 25% 25% 25%;
+  width: 50%;
 }
 
-@media (max-width: 450px){
-	#brand { 
-		max-width: 55%;
-		top:-50px;
-		left:90px;
-	}
-	#login {
-		margin: 30% 25% 25% 25%;
-		text-align: center;
-		width: 50%;
-	}
+@media (max-width: 450px) {
+  #brand {
+    max-width: 55%;
+    top: -50px;
+    left: 90px;
+  }
+
+  #login {
+    margin: 30% 25% 25% 25%;
+    text-align: center;
+    width: 50%;
+  }
+
+  #home {
+    padding-top: 100px;
+  }
 }
 
-@media (min-width:960px) {
-	#navbar {
-		position:relative;
-		/*top:-25px;*/
-	}
+@media (min-width: 960px) {
+  #navbar {
+    position: relative;
+
+    /*top:-25px;*/
+  }
 }
