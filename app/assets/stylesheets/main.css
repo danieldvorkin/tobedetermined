@@ -1,0 +1,13 @@
+#brand {
+	max-width: 45%;
+  position: relative;
+  top: -30px;
+}
+
+@media (max-width: 450px){
+	#brand { 
+		max-width: 55%;
+		top:-50px;
+		left:90px;
+	}
+}
