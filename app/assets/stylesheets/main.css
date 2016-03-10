@@ -11,10 +11,6 @@
 	margin: 150px 150px 125px 150px;
 }
 
-#admin-navbar {
-	top:0px;
-}
-
 #login {
 	margin: 15% 25% 25% 25%;
 	text-align: center;
@@ -37,6 +33,6 @@
 @media (min-width:960px) {
 	#navbar {
 		position:relative;
-		top:-25px;
+		/*top:-25px;*/
 	}
 }

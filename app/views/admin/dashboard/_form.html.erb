@@ -1,4 +1,4 @@
-<%= form_for(@admin_dashboard) do |f| %>
+<%= simple_form_for :dashboard do |f| %>
   <% if @admin_dashboard.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_dashboard.errors.count, "error") %> prohibited this admin_dashboard from being saved:</h2>

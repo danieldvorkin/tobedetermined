@@ -11,21 +11,22 @@
 			</a>
 		</div>
 		<div class="collapse navbar-collapse">
-			<% if current_admin %>
-				<ul class="nav navbar-nav navbar-right" id="navbar admin-navbar">
-					<li><%= link_to "HOME", root_path %></li>
-					<li><%= link_to 'LOG OUT', destroy_admin_session_path, :method=>'delete', class: 'smoothScroll' %>
-				</li>
-			<% else %>
-				<ul class="nav navbar-nav navbar-right" id="navbar">
-					<li><%= link_to "HOME", root_path %></li>
+			<ul class="nav navbar-nav navbar-right" id="navbar">
+				<li><%= link_to "HOME", root_path %></li>
+				<% if current_page?(root_path) %>
 					<li><a href="#about" class="smoothScroll">ABOUT</a></li>
 					<li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li>
 					<li><a href="#team" class="smoothScroll">TEAM</a></li>
 					<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
-					<li><%= link_to 'ADMIN', new_admin_session_path, class: "smoothScroll" %></li>
-				</ul>
-			<% end %>
+					<li><%= link_to "ADMIN", admin_dashboard_index_path, class: 'smoothScroll' %></li>
+				<% else %>
+					<% if current_admin %>
+						<li><%= link_to "LOG OUT", destroy_admin_session_path, :method=>'delete', class: 'smoothScroll' %></li>
+					<% else %>
+						<li><%= link_to "LOG IN", new_admin_session_path, class: "smoothScroll" %></li>
+					<% end %>
+				<% end %>
+			</ul>
 		</div>
 	</div>
 </section>
